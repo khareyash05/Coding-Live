@@ -6,7 +6,7 @@ const fs = require('fs');
 app.use(express.json())
 app.use(cors());
 app.post("/",(req,res)=>{
-    fs.writeFileSync('test.js',req.body.code);
+    fs.writeFileSync('file.js',req.body.code);
     console.log(req.body);
     res.json({message : "sucess"});
 })
